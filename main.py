@@ -33,7 +33,7 @@ def add_user(users: list) -> None:
     surname: str = input("Enter your surname: ")
     posts: int = int(input("Enter your number of posts: "))
     location: str = input("Enter your location: ")
-    new_user: dict = {'name': name, 'surname': surnam, 'posts': posts, 'location': location}
+    new_user: dict = {'name': name, 'surname': surname, 'posts': posts, 'location': location}
     users.append(new_user)
 
 # add_user(data_of_users)
@@ -47,4 +47,23 @@ def delete_user(users: list) -> None:
 
 # delete_user(data_of_users)
 # read(data_of_users)
+def update(users: list) -> None:
+    name: str = input("Enter name of user to be modified: ")
+    for user in users:
+        if user['name']==name:
+            new_name:str=('Enter new name: ')
+            new_surname:str=('Enter new surname: ')
+            new_posts:int=int(input("Enter number of posts: "))
+            new_location:str=('Enter new location: ')
+            user['name']=new_name
+            user['surname']=new_surname
+            user['posts']=new_posts
+            user['location']=new_location
+
+update(data_of_users)
+read(data_of_users)
+
+
+
+read(data_of_users)
 
